@@ -1,0 +1,20 @@
+.side-bar {
+	min-width: 200px;
+    max-width: 200px;
+    background: #f8f9fa;
+    color: #fff;
+    transition: all 0.3s;
+    box-shadow: 0 0 5px rgba(57,70,78,.2);
+    height: 100vh;
+    overflow: auto;
+    z-index: 1;
+    overflow-x: hidden;
+}
+
+.color-grey {
+    color: #868686;
+}
+
+.clickable {
+    cursor: pointer;
+}

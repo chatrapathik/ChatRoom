@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+{% block styles %}
+    {{ block.super }}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+{% endblock %}
+{% block body %}
+    <div class="container-fluid">
+        <div class="row flex-xl-nowrap">
+            <div class="col-12 col-md-3 bd-sidebar side-bar">
+                <div class="fa fa-user color-grey mt-2 ml-2">&nbsp;{{user}}</div>
+                <hr/>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control search" placeholder="search">
+                </div>
+                <div id="results"></div>
+                <div class="fa fa-spinner fa-spin search-spinner color-grey ml-5 mt-2 no-display"></div>
+                <div class="no-res color-grey no-display">No results Found</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block scripts_end %}
+    <script src="{% static 'js/main.js' %}"></script>
+{% endblock %}

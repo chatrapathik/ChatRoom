@@ -1,0 +1,11 @@
+<div class="card">
+	<ul class="list-group list-group-flush search-result-items">
+		{% for user in users %}
+			<li class="list-group-item searched-entity clickable">
+				<div class="color-grey">
+					<span class="fa fa-user"></span> &nbsp; &nbsp;{{user.username}}
+				</div>
+			</li>
+		{% endfor %}
+	</ul>
+</div>

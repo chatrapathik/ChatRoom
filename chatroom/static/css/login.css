@@ -1,0 +1,19 @@
+.chat-icon {
+    height: 10rem;
+}
+
+.login-body {
+    background: aliceblue;
+}
+
+.no-display {
+    display: none !important;
+}
+
+.failure-color {
+    color: #ff818185;
+}
+
+.success-color {
+    color: #208e399c;
+}

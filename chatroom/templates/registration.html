@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+{% block styles %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}" type="text/css">
+{% endblock %}
+{% block body %}
+    <body class="login-body" id="login-container">
+        <div class="container mt-5">
+            <div class="row justify-content-sm-center">
+                <div class="col-sm-4">
+                    <div class="card text-center">
+                        <div class="card-body" id="form-data">
+                            <img class="chat-icon mb-2" src="https://cdn.pixabay.com/photo/2016/11/30/18/14/chat-1873543__340.png">
+                            <form class="form-signin">
+                                {% if page == "registration" %}
+                                    <input type="text" class="form-control mb-4 username" placeholder="Username" required autofocus>
+                                    <input type="text" class="form-control mb-4 lastname" placeholder="Lastname" required>
+                                {% endif %}
+                                <input type="text" class="form-control mb-4 email" placeholder="Email" required>
+
+                                <input type="password" class="form-control mb-4 password" placeholder="Password" required>
+                                {% if page == "registration" %}
+                                    <input type="password" class="form-control mb-4 confirm-pwd" placeholder="Confirm Password" required>
+                                {% endif %}
+                                <button class="btn btn-primary btn-block mb-1 {{ page }}-button" type="submit">{% if page == "registration" %} Sign Up {% else %} Sign in {% endif %}</button>
+                                <span class="error-message failure-color no-display"></span>
+                            </form>
+                        </div>
+                        {% if page == "login" %}
+                            <a href="/app/registration" class="float-right mb-2">Create an account </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+{% endblock %}
+{% block scripts_end %}
+    <script src="{% static 'js/login.js' %}"></script>
+{% endblock %}
